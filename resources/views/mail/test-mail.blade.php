@@ -1,0 +1,3 @@
+<div>
+    {{ fake()->realText }}
+</div>
