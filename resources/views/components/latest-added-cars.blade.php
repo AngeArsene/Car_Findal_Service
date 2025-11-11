@@ -8,7 +8,7 @@
         @forelse ($cars as $car)
           <x-normal-car-card-item :car='$car' />
         @empty
-            
+            <x-no-cars-found />
         @endforelse
       </div>
     </div>
