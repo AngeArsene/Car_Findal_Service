@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Route;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
 
@@ -13,7 +15,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        return $this->resolveView();
     }
 
     /**
@@ -21,7 +23,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return $this->resolveView();
     }
 
     /**
@@ -29,7 +31,7 @@ class CarController extends Controller
      */
     public function store(StoreCarRequest $request)
     {
-        //
+        return $this->resolveView();
     }
 
     /**
@@ -45,7 +47,7 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        //
+        return $this->resolveView();
     }
 
     /**
@@ -62,5 +64,10 @@ class CarController extends Controller
     public function destroy(Car $car)
     {
         //
+    }
+
+    private function resolveView(?array $params = []): View
+    {
+        return view(Route::currentRouteName(), ...$params);
     }
 }

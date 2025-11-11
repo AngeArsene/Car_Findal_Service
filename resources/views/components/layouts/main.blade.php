@@ -1,3 +1,5 @@
+@props(['body_class'])
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +26,7 @@
 
 </head>
 
-<body>
+<body class="{{ $body_class ?? null }}">
     <!-- Home Header -->
     <x-main-header />
 
