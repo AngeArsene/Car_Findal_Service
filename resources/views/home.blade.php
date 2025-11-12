@@ -11,9 +11,9 @@
         <!-- New Cars -->
         <x-latest-added-cars :cars="$latest_cars" />
 
-        {{-- @auth --}}
+        @auth
             <!-- Favorite Cars -->
             <x-user-favorite-cars :cars="$favorite_cars" />
-        {{-- @endauth --}}
+        @endauth
     </main>
 </x-layouts.main>
