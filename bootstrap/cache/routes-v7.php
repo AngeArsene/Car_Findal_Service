@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::aBjxMF1XXMyZybtf',
+            '_route' => 'generated::txp1q34VIdcAnNqX',
           ),
           1 => NULL,
           2 => 
@@ -213,7 +213,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::aBjxMF1XXMyZybtf' => 
+    'generated::txp1q34VIdcAnNqX' => 
     array (
       'methods' => 
       array (
@@ -242,7 +242,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004b50000000000000000";}}',
-        'as' => 'generated::aBjxMF1XXMyZybtf',
+        'as' => 'generated::txp1q34VIdcAnNqX',
       ),
       'fallback' => false,
       'defaults' => 

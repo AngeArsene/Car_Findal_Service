@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="{{ $body_class ?? null }}">
+<body @class([$body_class ?? null])">
     <!-- Home Header -->
     <x-main-header />
 
