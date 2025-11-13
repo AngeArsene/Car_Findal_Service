@@ -30,7 +30,7 @@
           </svg>
         </button>
       </div>
-      <h2 class="car-item-title">2016 - Lexus RX200t</h2>
+      <h2 class="car-item-title">2016 - {{ $car->name }}</h2>
       <p class="car-item-price">$25,000</p>
       <hr />
       <p class="m-0">

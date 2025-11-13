@@ -1,5 +1,5 @@
 @props([
-    'body_class',
+    'body_class' => null,
     'pagination' => true
 ])
 
@@ -29,7 +29,7 @@
 
 </head>
 
-<body @class([$body_class ?? null])">
+<body @class([$body_class]) >
     <!-- Home Header -->
     <x-main-header />
 

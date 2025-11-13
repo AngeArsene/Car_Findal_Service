@@ -1,5 +1,5 @@
 <!--/ Cars Section Wrapper -->
-@props(['section_title', 'cars'])
+@props(['section_title', 'cars', 'car_card_item'])
 
 <section>
     <div class="container">
@@ -9,7 +9,15 @@
         @else
             <div class="car-items-listing">
                 @foreach ($cars as $car)
-                    {{ $slot }}
+                    @switch($car_card_item)
+                        @case('normal')
+                            <x-normal-car-card-item :car="$car" />
+                        @break
+
+                        @case('favorite')
+                            <x-favorite-car-card-item :car="$car" />
+                        @break
+                    @endswitch
                 @endforeach
             </div>
         @endempty

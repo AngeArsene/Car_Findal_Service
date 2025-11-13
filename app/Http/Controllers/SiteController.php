@@ -15,8 +15,8 @@ class SiteController extends Controller
     {
         $page_name = Route::currentRouteName();
 
-        $latest_cars = collect(range(1, 15))->map(fn () => new stdClass());
-        $favorite_cars = collect(range(1, 5))->map(fn () => new stdClass());
+        $latest_cars = collect(range(1, 15))->map(fn () => (object) ['name' => 'Ange Arsene']);
+        $favorite_cars = collect(range(1, 5))->map(fn () => (object) ['name' => 'Ange Arsene']);
 
         return view($page_name, compact('latest_cars', 'favorite_cars'));
     }

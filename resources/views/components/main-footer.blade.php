@@ -1,6 +1,4 @@
-@props([
-    'pagination' => true,
-])
+@props(['pagination' => true])
 
 <!-- Main Footer -->
 <footer class="w-full" style="background: #121212; color: #f1f1f1; border-top: 1px solid #2a2a2a;">
