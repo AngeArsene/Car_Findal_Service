@@ -15,7 +15,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        return $this->resolveView();
+        return $this->resolveViewName();
     }
 
     /**
@@ -23,7 +23,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        return $this->resolveView();
+        return $this->resolveViewName();
     }
 
     /**
@@ -31,7 +31,7 @@ class CarController extends Controller
      */
     public function store(StoreCarRequest $request)
     {
-        return $this->resolveView();
+        return $this->resolveViewName();
     }
 
     /**
@@ -47,7 +47,7 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        return $this->resolveView();
+        return $this->resolveViewName();
     }
 
     /**
@@ -66,7 +66,7 @@ class CarController extends Controller
         //
     }
 
-    private function resolveView(?array $params = []): View
+    private function resolveViewName(?array $params = []): View
     {
         return view(Route::currentRouteName(), ...$params);
     }
