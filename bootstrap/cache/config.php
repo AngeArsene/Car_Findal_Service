@@ -1,19 +1,4 @@
 <?php return array (
-  0 => 'app',
-  1 => 'auth',
-  2 => 'broadcasting',
-  3 => 'cache',
-  4 => 'concurrency',
-  5 => 'cors',
-  6 => 'database',
-  7 => 'filesystems',
-  8 => 'hashing',
-  9 => 'logging',
-  10 => 'mail',
-  11 => 'queue',
-  12 => 'services',
-  13 => 'session',
-  14 => 'view',
   'app' => 
   array (
     'name' => 'Car Findal Service',
@@ -106,6 +91,7 @@
       'Storage' => 'Illuminate\\Support\\Facades\\Storage',
       'Str' => 'Illuminate\\Support\\Str',
       'URL' => 'Illuminate\\Support\\Facades\\URL',
+      'Uri' => 'Illuminate\\Support\\Uri',
       'Validator' => 'Illuminate\\Support\\Facades\\Validator',
       'View' => 'Illuminate\\Support\\Facades\\View',
       'Vite' => 'Illuminate\\Support\\Facades\\Vite',
@@ -399,6 +385,7 @@
       array (
         'cluster' => 'redis',
         'prefix' => 'car_findal_service_database_',
+        'persistent' => false,
       ),
       'default' => 
       array (
@@ -430,6 +417,7 @@
         'driver' => 'local',
         'root' => 'C:\\Users\\AllReady 237\\Desktop\\laravel projects\\37448b57295ae871b637a6a18ec790af\\Car_Findal_Service\\storage\\app',
         'throw' => false,
+        'report' => false,
       ),
       'public' => 
       array (
@@ -438,6 +426,7 @@
         'url' => 'http://127.0.0.1:8000/storage',
         'visibility' => 'public',
         'throw' => false,
+        'report' => false,
       ),
       's3' => 
       array (
@@ -450,6 +439,7 @@
         'endpoint' => NULL,
         'use_path_style_endpoint' => false,
         'throw' => false,
+        'report' => false,
       ),
     ),
     'links' => 
@@ -580,10 +570,10 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
+        'scheme' => NULL,
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '1025',
-        'encryption' => 'tls',
         'username' => NULL,
         'password' => NULL,
         'timeout' => NULL,
