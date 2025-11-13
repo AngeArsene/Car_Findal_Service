@@ -37,9 +37,9 @@ class CarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Car $car)
+    public function show()
     {
-        //
+        return $this->resolveViewName();
     }
 
     /**

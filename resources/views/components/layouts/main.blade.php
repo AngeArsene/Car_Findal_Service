@@ -1,4 +1,7 @@
-@props(['body_class'])
+@props([
+    'body_class',
+    'pagination' => true
+])
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +35,7 @@
 
     {{ $slot }}
 
-    <x-main-footer />
+    <x-main-footer :pagination="$pagination" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"
         integrity="sha512-XJgPMFq31Ren4pKVQgeD+0JTDzn0IwS1802sc+QTZckE6rny7AN2HLReq6Yamwpd2hFe5nJJGZLvPStWFv5Kww=="

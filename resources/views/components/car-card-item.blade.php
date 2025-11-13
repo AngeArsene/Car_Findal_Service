@@ -2,7 +2,7 @@
 @props(['car'])
 
 <div class="car-item card">
-    <a href="/view.html">
+    <a href="{{ route('cars.show', random_int(0, 100)) }}">
       <img
         src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
         alt=""

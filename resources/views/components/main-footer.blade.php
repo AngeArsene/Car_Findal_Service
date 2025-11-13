@@ -1,6 +1,12 @@
+@props([
+    'pagination' => true,
+])
+
 <!-- Main Footer -->
 <footer class="w-full" style="background: #121212; color: #f1f1f1; border-top: 1px solid #2a2a2a;">
-    <x-pagination />
+    @if ($pagination)
+        <x-pagination />
+    @endif
     <div class="container" style="width: 90%; max-width: 1200px; margin: auto; padding: 40px 15px;">
 
         {{-- Top Footer Section --}}
