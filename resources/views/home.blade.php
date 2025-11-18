@@ -9,11 +9,11 @@
         <x-search-car-form />
 
         <!-- New Cars -->
-        <x-latest-added-cars :cars="$latest_cars" />
+        <x-cars-section-wrapper section_title='Latest Added Cars' type='normal' :cars="$latest_cars" />
 
-        @auth
+        {{-- @auth --}}
             <!-- Favorite Cars -->
-            <x-user-favorite-cars :cars="$favorite_cars" />
-        @endauth
+            <x-cars-section-wrapper section_title='User Favorite Cars' type="favorite" :cars="$favorite_cars" />
+        {{-- @endauth --}}
     </main>
 </x-layouts.main>
