@@ -15,8 +15,19 @@ class SiteController extends Controller
     {
         $page_name = Route::currentRouteName();
 
-        $latest_cars = collect(range(1, 15))->map(fn () => (object) ['name' => fake()->word]);
-        $favorite_cars = collect(range(1, 5))->map(fn () => (object) ['name' => fake()->word]);
+        $latest_cars = collect()->times(500, function (int $id) {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        })->paginate(15);
+
+        $favorite_cars = collect()->times(5, function (int $id) {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        });
 
         return view($page_name, compact('latest_cars', 'favorite_cars'));
     }

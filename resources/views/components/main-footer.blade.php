@@ -1,9 +1,9 @@
-@props(['pagination' => true])
+@props(['pagination' => true, 'cars'])
 
 <!-- Main Footer -->
 <footer class="w-full" style="background: #121212; color: #f1f1f1; border-top: 1px solid #2a2a2a;">
     @if ($pagination)
-        <x-pagination />
+        <x-pagination :cars="$cars" />
     @endif
     <div class="container" style="width: 90%; max-width: 1200px; margin: auto; padding: 40px 15px;">
 

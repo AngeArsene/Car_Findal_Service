@@ -1,6 +1,6 @@
 @props(['latest_cars', 'favorite_cars'])
 
-<x-layouts.main>
+<x-layouts.main :cars="$latest_cars">
     <!-- Home Slider -->
     <x-main-hero-slider />
 
@@ -11,9 +11,9 @@
         <!-- New Cars -->
         <x-cars-section-wrapper section_title='Latest Added Cars' type='normal' :cars="$latest_cars" />
 
-        {{-- @auth --}}
+        @auth
             <!-- Favorite Cars -->
             <x-cars-section-wrapper section_title='User Favorite Cars' type="favorite" :cars="$favorite_cars" />
-        {{-- @endauth --}}
+        @endauth
     </main>
 </x-layouts.main>
