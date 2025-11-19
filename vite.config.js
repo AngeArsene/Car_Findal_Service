@@ -8,4 +8,13 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            input: {
+                app: 'resources/js/app.js',
+                favicon: 'resources/img/favicon/favicon.ico',
+                manifest: 'resources/img/favicon/site.webmanifest',
+            }
+        }
+    }
 });
