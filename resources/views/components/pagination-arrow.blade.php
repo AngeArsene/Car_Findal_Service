@@ -2,10 +2,10 @@
 
 @if ($page_url)
     <a href="{{ $page_url }}" class="pagination-item">
-        <x-arrow :direction="$direction" />
+        <x-arrow :$direction />
     </a>
 @else
     <button disabled="true" class="pagination-item">
-        <x-arrow :direction="$direction" />
+        <x-arrow :$direction />
     </button>
 @endif

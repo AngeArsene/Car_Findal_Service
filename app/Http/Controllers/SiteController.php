@@ -15,14 +15,14 @@ class SiteController extends Controller
     {
         $page_name = Route::currentRouteName();
 
-        $latest_cars = collect()->times(500, function (int $id) {
+        $latest_cars = collect()->times(500, function (int $id): object {
             return (object) [
                 'id' => $id,
                 'name' => fake()->word
             ];
         })->paginate(15);
 
-        $favorite_cars = collect()->times(5, function (int $id) {
+        $favorite_cars = collect()->times(5, function (int $id): object {
             return (object) [
                 'id' => $id,
                 'name' => fake()->word

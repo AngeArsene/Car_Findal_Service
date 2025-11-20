@@ -13,7 +13,7 @@
 
         @auth
             <!-- Favorite Cars -->
-            <x-cars-section-wrapper section_title='User Favorite Cars' type="favorite" :cars="$favorite_cars" />
+            <x-cars-section-wrapper section_title='My Favorite Cars' type="favorite" :cars="$favorite_cars" />
         @endauth
     </main>
 </x-layouts.main>

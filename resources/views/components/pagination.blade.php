@@ -1,10 +1,3 @@
-@props(['cars'])
-
-@php
-    $start = max(1, $cars->currentPage() - 2);
-    $end = min($cars->lastPage(), $cars->currentPage() + 2);
-@endphp
-
 <nav class="pagination my-large">
 
     {{-- Previous arrow --}}

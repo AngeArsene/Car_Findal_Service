@@ -9,7 +9,7 @@
         @else
             <div class="car-items-listing">
                 @foreach ($cars as $car)
-                    <x-car-card-item :car="$car" :type="$type" />
+                    <x-car-card-item :$car :$type />
                 @endforeach
             </div>
         @endempty

@@ -15,7 +15,14 @@ class CarController extends Controller
      */
     public function index()
     {
-        return $this->resolveViewName();
+        $cars = collect()->times(500, function (int $id): object {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        })->paginate(5);
+
+        return $this->resolveViewName(compact('cars'));
     }
 
     /**
@@ -68,6 +75,6 @@ class CarController extends Controller
 
     private function resolveViewName(?array $params = []): View
     {
-        return view(Route::currentRouteName(), ...$params);
+        return view(Route::currentRouteName(), $params);
     }
 }
