@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::f0REA0OGohYZZFER',
+            '_route' => 'generated::RO21mw7GpxD3eXaT',
           ),
           1 => NULL,
           2 => 
@@ -253,7 +253,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::f0REA0OGohYZZFER' => 
+    'generated::RO21mw7GpxD3eXaT' => 
     array (
       'methods' => 
       array (
@@ -281,8 +281,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'C:\\\\Users\\\\AllReady 237\\\\Desktop\\\\laravel projects\\\\37448b57295ae871b637a6a18ec790af\\\\Car_Findal_Service\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007770000000000000000";}}',
-        'as' => 'generated::f0REA0OGohYZZFER',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"000000000000077f0000000000000000";}}',
+        'as' => 'generated::RO21mw7GpxD3eXaT',
       ),
       'fallback' => false,
       'defaults' => 
