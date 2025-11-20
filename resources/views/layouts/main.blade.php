@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>{{ $page_name }}</title>
+    <title>{{ $pageName() }}</title>
 
     <link rel="manifest" href="{{ Vite::asset('resources/img/favicon/site.webmanifest') }}">
     <link rel="icon" type="image/ico" href="{{ Vite::asset('resources/img/favicon/favicon.ico') }}">
@@ -33,13 +33,18 @@
 
 </head>
 
-<body {{ $attributes }} >
-    <!-- Home Header -->
-    <x-main-header />
+<body {{ $attributes }}>
+    @if ($header)
+        <!-- Main Header -->
+        <x-main-header />
+    @endif
 
     {{ $slot }}
 
-    <x-main-footer :$pagination :$cars />
+    @if ($footer)
+        <!-- Main Footer -->
+        <x-main-footer :$pagination :$cars />
+    @endif
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"
         integrity="sha512-XJgPMFq31Ren4pKVQgeD+0JTDzn0IwS1802sc+QTZckE6rny7AN2HLReq6Yamwpd2hFe5nJJGZLvPStWFv5Kww=="

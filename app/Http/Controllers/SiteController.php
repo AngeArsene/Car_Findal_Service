@@ -13,8 +13,6 @@ class SiteController extends Controller
      */
     public function __invoke(): View
     {
-        $page_name = Route::currentRouteName();
-
         $latest_cars = collect()->times(500, function (int $id): object {
             return (object) [
                 'id' => $id,
@@ -29,6 +27,6 @@ class SiteController extends Controller
             ];
         });
 
-        return view($page_name, compact('latest_cars', 'favorite_cars'));
+        return $this->resolveViewName(compact('latest_cars', 'favorite_cars'));
     }
 }

@@ -10,22 +10,31 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class Main extends Component
 {
-    public string $page_name = '';
     /**
      * Create a new component instance.
      */
     public function __construct(
+        public bool $header = true,
+        public bool $footer = true,
         public bool $pagination = true,
         public ?LengthAwarePaginator $cars = null
     ) {
-        $this->page_name = str_replace(
-            'Index', 'Home', ucwords(
-                str_replace('.', " ",
-                ucfirst(Route::currentRouteName())
-            )
+    }
+
+    public function pageName(): string
+    {
+        return str_replace(
+            'Index',
+            'Home',
+            ucwords(
+                str_replace(
+                    '.',
+                    " ",
+                    Route::currentRouteName()
+                )
             )
         )
-        . ' - ' . config('app.name');
+            . ' - ' . config('app.name');
     }
 
     /**
