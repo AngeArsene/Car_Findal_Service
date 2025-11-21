@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use Illuminate\View\View;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
 
@@ -11,7 +12,7 @@ class CarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
         $cars = collect()->times(500, function (int $id): object {
             return (object) [
@@ -23,10 +24,34 @@ class CarController extends Controller
         return $this->resolveViewName(compact('cars'));
     }
 
+    public function favorite(): View
+    {
+        $cars = collect()->times(500, function (int $id): object {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        })->paginate(15);
+
+        return $this->resolveViewName(compact('cars'));
+    }
+
+    public function search(): View
+    {
+        $cars = collect()->times(500, function (int $id): object {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        })->paginate(15);
+
+        return $this->resolveViewName(compact('cars'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
         return $this->resolveViewName();
     }
@@ -34,7 +59,7 @@ class CarController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCarRequest $request)
+    public function store(StoreCarRequest $request): View
     {
         return $this->resolveViewName();
     }
@@ -42,7 +67,7 @@ class CarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Car $car): View
     {
         return $this->resolveViewName();
     }
@@ -50,7 +75,7 @@ class CarController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Car $car)
+    public function edit(Car $car): View
     {
         return $this->resolveViewName();
     }

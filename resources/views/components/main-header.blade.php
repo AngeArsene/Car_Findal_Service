@@ -35,7 +35,9 @@
                         </x-nav-bar-link>
                     </li>
                     <li>
-                        <a href="watchlist.html">My Favourite Cars</a>
+                        <x-nav-bar-link route='cars.favorite'>
+                            My Favorite Cars
+                        </x-nav-bar-link>
                     </li>
                     <li>
                         <form action="#" method="post">

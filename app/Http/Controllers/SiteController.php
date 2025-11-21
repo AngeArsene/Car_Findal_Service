@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use stdClass;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Route;
 
 class SiteController extends Controller
 {
