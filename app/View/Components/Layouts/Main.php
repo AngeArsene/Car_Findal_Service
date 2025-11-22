@@ -28,7 +28,7 @@ class Main extends Component
             'Home',
             ucwords(
                 str_replace(
-                    '.',
+                    ['.', '-'],
                     " ",
                     Route::currentRouteName()
                 )

@@ -16,4 +16,5 @@ Route::get('/favorite-cars', [CarController::class, 'favorite'])->name('cars.fav
 Route::prefix('auth')->name('auth.')->controller(AuthController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
     Route::get('/signup', 'signup')->name('signup');
+    Route::get('/reset-password', 'resetPassword')->name('reset-password');
 });

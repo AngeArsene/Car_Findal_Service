@@ -16,4 +16,9 @@ class AuthController extends Controller
     {
         return $this->resolveViewName();
     }
+
+    public function resetPassword(): View
+    {
+        return $this->resolveViewName();
+    }
 }
