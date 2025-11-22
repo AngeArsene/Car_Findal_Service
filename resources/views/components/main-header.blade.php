@@ -40,8 +40,8 @@
                         </x-nav-bar-link>
                     </li>
                     <li>
-                        <form action="#" method="post">
-                            <button>Logout</button>
+                        <form action="{{ route('auth.logout') }}" method="post"> @csrf
+                            <button type="submit">Logout</button>
                         </form>
                     </li>
                 </ul>

@@ -10,7 +10,7 @@
                     </div>
                     <h1 class="auth-page-title">Signup</h1>
 
-                    <form action="" method="post">
+                    <form action="{{ route('auth.register') }}" method="post"> @csrf
                         <div class="form-group">
                             <input type="email" placeholder="Your Email" />
                         </div>

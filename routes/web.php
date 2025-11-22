@@ -12,9 +12,3 @@ Route::get('/', SiteController::class)->name('home');
 Route::get('/search-cars', [CarController::class, 'search'])->name('cars.search');
 Route::get('/car-images/{car}', [CarController::class, 'images'])->name('cars.images');
 Route::get('/favorite-cars', [CarController::class, 'favorite'])->name('cars.favorite');
-
-Route::prefix('auth')->name('auth.')->controller(AuthController::class)->group(function () {
-    Route::get('/login', 'login')->name('login');
-    Route::get('/signup', 'signup')->name('signup');
-    Route::get('/reset-password', 'resetPassword')->name('reset-password');
-});

@@ -3,6 +3,7 @@
 namespace App\View\Components\Layouts;
 
 use Closure;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,7 @@ class Main extends Component
 
     public function pageName(): string
     {
+        // $string = Str::replace(['.', '-'], " ", Route::currentRouteName())->replace('index', 'home')->ucwords();
         return str_replace(
             'Index',
             'Home',

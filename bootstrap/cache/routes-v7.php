@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Y0vErGIYN7Ib8zIN',
+            '_route' => 'generated::KUpzf8p34MqoPZ31',
           ),
           1 => NULL,
           2 => 
@@ -163,6 +163,44 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/auth/verify-user' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'auth.verify-user',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/auth/logout' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'auth.logout',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/auth/signup' => 
       array (
         0 => 
@@ -183,6 +221,25 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/auth/register' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'auth.register',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/auth/reset-password' => 
       array (
         0 => 
@@ -190,6 +247,26 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'auth.reset-password',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/auth/verify-email' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'auth.verify-email',
           ),
           1 => NULL,
           2 => 
@@ -336,7 +413,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::Y0vErGIYN7Ib8zIN' => 
+    'generated::KUpzf8p34MqoPZ31' => 
     array (
       'methods' => 
       array (
@@ -364,8 +441,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'C:\\\\Users\\\\AllReady 237\\\\Desktop\\\\laravel projects\\\\37448b57295ae871b637a6a18ec790af\\\\Car_Findal_Service\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007870000000000000000";}}',
-        'as' => 'generated::Y0vErGIYN7Ib8zIN',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007900000000000000000";}}',
+        'as' => 'generated::KUpzf8p34MqoPZ31',
       ),
       'fallback' => false,
       'defaults' => 
@@ -804,7 +881,79 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AuthController@login',
         'as' => 'auth.login',
         'namespace' => NULL,
-        'prefix' => '/auth',
+        'prefix' => 'auth',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'auth.verify-user' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'auth/verify-user',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AuthController@verifyUser',
+        'controller' => 'App\\Http\\Controllers\\AuthController@verifyUser',
+        'as' => 'auth.verify-user',
+        'namespace' => NULL,
+        'prefix' => 'auth',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'auth.logout' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'auth/logout',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AuthController@logout',
+        'controller' => 'App\\Http\\Controllers\\AuthController@logout',
+        'as' => 'auth.logout',
+        'namespace' => NULL,
+        'prefix' => 'auth',
         'where' => 
         array (
         ),
@@ -841,7 +990,43 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AuthController@signup',
         'as' => 'auth.signup',
         'namespace' => NULL,
-        'prefix' => '/auth',
+        'prefix' => 'auth',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'auth.register' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'auth/register',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AuthController@register',
+        'controller' => 'App\\Http\\Controllers\\AuthController@register',
+        'as' => 'auth.register',
+        'namespace' => NULL,
+        'prefix' => 'auth',
         'where' => 
         array (
         ),
@@ -878,7 +1063,44 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AuthController@resetPassword',
         'as' => 'auth.reset-password',
         'namespace' => NULL,
-        'prefix' => '/auth',
+        'prefix' => 'auth',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'auth.verify-email' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'auth/verify-email',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AuthController@verifyEmail',
+        'controller' => 'App\\Http\\Controllers\\AuthController@verifyEmail',
+        'as' => 'auth.verify-email',
+        'namespace' => NULL,
+        'prefix' => 'auth',
         'where' => 
         array (
         ),
