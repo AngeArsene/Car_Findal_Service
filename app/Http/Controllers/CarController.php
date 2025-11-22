@@ -48,6 +48,11 @@ class CarController extends Controller
         return $this->resolveViewName(compact('cars'));
     }
 
+    public function images(int $car): View
+    {
+        return $this->resolveViewName();
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -67,7 +72,7 @@ class CarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Car $car): View
+    public function show(int $car): View
     {
         return $this->resolveViewName();
     }
@@ -75,7 +80,7 @@ class CarController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Car $car): View
+    public function edit(int $car): View
     {
         return $this->resolveViewName();
     }

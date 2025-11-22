@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::R3OjroJOGW4z2fk0',
+            '_route' => 'generated::4haHnMLURvvXvYid',
           ),
           1 => NULL,
           2 => 
@@ -186,11 +186,11 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/cars/([^/]++)(?|(*:24)|/edit(*:36)|(*:43)))/?$}sDu',
+      0 => '{^(?|/car(?|s/([^/]++)(?|(*:27)|/edit(*:39)|(*:46))|\\-images/([^/]++)(*:71)))/?$}sDu',
     ),
     3 => 
     array (
-      24 => 
+      27 => 
       array (
         0 => 
         array (
@@ -213,7 +213,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      36 => 
+      39 => 
       array (
         0 => 
         array (
@@ -236,7 +236,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      43 => 
+      46 => 
       array (
         0 => 
         array (
@@ -277,7 +277,30 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        2 => 
+      ),
+      71 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'cars.images',
+          ),
+          1 => 
+          array (
+            0 => 'car',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
         array (
           0 => NULL,
           1 => NULL,
@@ -293,7 +316,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::R3OjroJOGW4z2fk0' => 
+    'generated::4haHnMLURvvXvYid' => 
     array (
       'methods' => 
       array (
@@ -321,8 +344,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'C:\\\\Users\\\\AllReady 237\\\\Desktop\\\\laravel projects\\\\37448b57295ae871b637a6a18ec790af\\\\Car_Findal_Service\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007830000000000000000";}}',
-        'as' => 'generated::R3OjroJOGW4z2fk0',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007850000000000000000";}}',
+        'as' => 'generated::4haHnMLURvvXvYid',
       ),
       'fallback' => false,
       'defaults' => 
@@ -654,6 +677,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'cars.search',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'cars.images' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'car-images/{car}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CarController@images',
+        'controller' => 'App\\Http\\Controllers\\CarController@images',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'cars.images',
       ),
       'fallback' => false,
       'defaults' => 

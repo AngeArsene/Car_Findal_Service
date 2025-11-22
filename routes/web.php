@@ -10,6 +10,7 @@ Route::resource('cars', CarController::class);
 Route::get('/', SiteController::class)->name('home');
 
 Route::get('/search-cars', [CarController::class, 'search'])->name('cars.search');
+Route::get('/car-images/{car}', [CarController::class, 'images'])->name('cars.images');
 Route::get('/favorite-cars', [CarController::class, 'favorite'])->name('cars.favorite');
 
 Route::prefix('auth')->name('auth.')->controller(AuthController::class)->group(function () {
