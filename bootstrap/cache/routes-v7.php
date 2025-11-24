@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::KUpzf8p34MqoPZ31',
+            '_route' => 'generated::wIQrWzHu6APwRgdq',
           ),
           1 => NULL,
           2 => 
@@ -163,13 +163,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/auth/verify-user' => 
+      '/auth/logout' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'auth.verify-user',
+            '_route' => 'auth.logout',
           ),
           1 => NULL,
           2 => 
@@ -182,13 +182,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/auth/logout' => 
+      '/auth/verify-user' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'auth.logout',
+            '_route' => 'auth.verify-user',
           ),
           1 => NULL,
           2 => 
@@ -413,7 +413,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::KUpzf8p34MqoPZ31' => 
+    'generated::wIQrWzHu6APwRgdq' => 
     array (
       'methods' => 
       array (
@@ -442,7 +442,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007900000000000000000";}}',
-        'as' => 'generated::KUpzf8p34MqoPZ31',
+        'as' => 'generated::wIQrWzHu6APwRgdq',
       ),
       'fallback' => false,
       'defaults' => 
@@ -900,22 +900,22 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'auth.verify-user' => 
+    'auth.logout' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'auth/verify-user',
+      'uri' => 'auth/logout',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\Http\\Controllers\\AuthController@verifyUser',
-        'controller' => 'App\\Http\\Controllers\\AuthController@verifyUser',
-        'as' => 'auth.verify-user',
+        'uses' => 'App\\Http\\Controllers\\AuthController@logout',
+        'controller' => 'App\\Http\\Controllers\\AuthController@logout',
+        'as' => 'auth.logout',
         'namespace' => NULL,
         'prefix' => 'auth',
         'where' => 
@@ -936,22 +936,22 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'auth.logout' => 
+    'auth.verify-user' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'auth/logout',
+      'uri' => 'auth/verify-user',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\Http\\Controllers\\AuthController@logout',
-        'controller' => 'App\\Http\\Controllers\\AuthController@logout',
-        'as' => 'auth.logout',
+        'uses' => 'App\\Http\\Controllers\\AuthController@verifyUser',
+        'controller' => 'App\\Http\\Controllers\\AuthController@verifyUser',
+        'as' => 'auth.verify-user',
         'namespace' => NULL,
         'prefix' => 'auth',
         'where' => 

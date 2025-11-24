@@ -17,7 +17,6 @@ class Main extends Component
     public function __construct(
         public bool $header = true,
         public bool $footer = true,
-        public bool $pagination = true,
         public ?LengthAwarePaginator $cars = null
     ) {
     }

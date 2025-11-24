@@ -22,7 +22,7 @@ class Guest extends Component
     public function render(): View|Closure|string
     {
         return <<<'blade'
-<x-layouts.main {{ $attributes }} :pagination="false" :header="false" :footer="false">
+<x-layouts.main {{ $attributes }} :header="false" :footer="false">
     {{ $slot }}
 </x-layouts.main>
 blade;

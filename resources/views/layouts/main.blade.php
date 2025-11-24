@@ -43,7 +43,7 @@
 
     @if ($footer)
         <!-- Main Footer -->
-        <x-main-footer :$pagination :$cars />
+        <x-main-footer :$cars />
     @endif
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"
