@@ -192,14 +192,14 @@
   ),
   'database' => 
   array (
-    'default' => 'sqlite',
+    'default' => 'mysql',
     'connections' => 
     array (
       'sqlite' => 
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'C:\\Users\\AllReady 237\\Desktop\\laravel projects\\37448b57295ae871b637a6a18ec790af\\Car_Findal_Service\\database\\database.sqlite',
+        'database' => 'car_findal_service',
         'prefix' => '',
         'foreign_key_constraints' => true,
         'busy_timeout' => NULL,
@@ -212,9 +212,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'car_findal_service',
         'username' => 'root',
-        'password' => '',
+        'password' => 'angearsene@11433',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -232,9 +232,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'car_findal_service',
         'username' => 'root',
-        'password' => '',
+        'password' => 'angearsene@11433',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -251,10 +251,10 @@
         'driver' => 'pgsql',
         'url' => NULL,
         'host' => '127.0.0.1',
-        'port' => '5432',
-        'database' => 'laravel',
+        'port' => '3306',
+        'database' => 'car_findal_service',
         'username' => 'root',
-        'password' => '',
+        'password' => 'angearsene@11433',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -265,11 +265,11 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '1433',
-        'database' => 'laravel',
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'car_findal_service',
         'username' => 'root',
-        'password' => '',
+        'password' => 'angearsene@11433',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -590,13 +590,13 @@
     ),
     'batching' => 
     array (
-      'database' => 'sqlite',
+      'database' => 'mysql',
       'table' => 'job_batches',
     ),
     'failed' => 
     array (
       'driver' => 'database-uuids',
-      'database' => 'sqlite',
+      'database' => 'mysql',
       'table' => 'failed_jobs',
     ),
   ),
