@@ -1,4 +1,4 @@
-<x-layouts.main :pagination="false">
+<x-layouts.main>
     <main>
         <div class="container-small">
             <h1 class="car-details-page-title">Add new car</h1>
