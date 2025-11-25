@@ -37,7 +37,19 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('cars', function (Blueprint $table) {
-            //
+            $table->dropColumn('year');
+            $table->dropColumn('price');
+            $table->dropColumn('neighborhood_id');
+            $table->dropColumn('vin');
+            $table->dropColumn('mileage');
+            $table->dropColumn('description');
+            $table->dropColumn('user_id');
+            $table->dropColumn('maker_id');
+            $table->dropColumn('model_id');
+            $table->dropColumn('car_type_id');
+            $table->dropColumn('fuel_type_id');
+            $table->dropColumn('city_id');
+            $table->dropSoftDeletes();
         });
     }
 };
