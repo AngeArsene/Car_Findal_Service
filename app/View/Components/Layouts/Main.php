@@ -21,21 +21,11 @@ class Main extends Component
     ) {
     }
 
-    public function pageName(): string
+    public function pageTitle(): string
     {
-        // $string = Str::replace(['.', '-'], " ", Route::currentRouteName())->replace('index', 'home')->ucwords();
-        return str_replace(
-            'Index',
-            'Home',
-            ucwords(
-                str_replace(
-                    ['.', '-'],
-                    " ",
-                    Route::currentRouteName()
-                )
-            )
-        )
-            . ' - ' . config('app.name');
+        $title = Str::of(Route::currentRouteName())->replace(['.', '-'], ' ')->replace('index', 'home', false)->title();
+
+        return $title . ' - ' . config('app.name');
     }
 
     /**
