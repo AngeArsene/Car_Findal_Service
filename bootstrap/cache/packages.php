@@ -1,4 +1,11 @@
 <?php return array (
+  'fahlisaputra/laravel-minify' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Fahlisaputra\\Minify\\MinifyServiceProvider',
+    ),
+  ),
   'laravel/pail' => 
   array (
     'providers' => 

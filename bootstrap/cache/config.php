@@ -754,6 +754,33 @@
       'Vite' => 'Illuminate\\Support\\Facades\\Vite',
     ),
   ),
+  'minify' => 
+  array (
+    'enabled' => true,
+    'assets_enabled' => true,
+    'assets_route' => '_minify',
+    'assets_storage' => 'resources',
+    'insert_semicolon' => 
+    array (
+      'css' => false,
+      'js' => false,
+    ),
+    'remove_comments' => true,
+    'obfuscate' => true,
+    'skip_ld_json' => true,
+    'ignore' => 
+    array (
+    ),
+    'enable_directive_replacement' => false,
+    'directives' => 
+    array (
+      '@' => 'x-on:',
+    ),
+    'keep_directives' => 
+    array (
+      0 => '@vite',
+    ),
+  ),
   'tinker' => 
   array (
     'commands' => 

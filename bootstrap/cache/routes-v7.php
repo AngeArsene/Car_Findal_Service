@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Bx3WtM91gh92rQ2B',
+            '_route' => 'generated::rM5AByLFWCfxuPro',
           ),
           1 => NULL,
           2 => 
@@ -283,11 +283,35 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/car(?|s/([^/]++)(?|(*:27)|/edit(*:39)|(*:46))|\\-images/([^/]++)(*:71)))/?$}sDu',
+      0 => '{^(?|/_minify(?:/((?:.*)))?(*:29)|/car(?|s/([^/]++)(?|(*:56)|/edit(*:68)|(*:75))|\\-images/([^/]++)(*:100)))/?$}sDu',
     ),
     3 => 
     array (
-      27 => 
+      29 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'minify.assets',
+            'file' => NULL,
+          ),
+          1 => 
+          array (
+            0 => 'file',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      56 => 
       array (
         0 => 
         array (
@@ -310,7 +334,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      39 => 
+      68 => 
       array (
         0 => 
         array (
@@ -333,7 +357,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      46 => 
+      75 => 
       array (
         0 => 
         array (
@@ -375,7 +399,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      71 => 
+      100 => 
       array (
         0 => 
         array (
@@ -413,7 +437,36 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::Bx3WtM91gh92rQ2B' => 
+    'minify.assets' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => '_minify/{file?}',
+      'action' => 
+      array (
+        'uses' => 'Fahlisaputra\\Minify\\Controllers\\HttpConnectionHandler@__invoke',
+        'controller' => 'Fahlisaputra\\Minify\\Controllers\\HttpConnectionHandler',
+        'as' => 'minify.assets',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'file' => '(.*)',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::rM5AByLFWCfxuPro' => 
     array (
       'methods' => 
       array (
@@ -441,8 +494,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'C:\\\\Users\\\\AllReady 237\\\\Desktop\\\\laravel projects\\\\37448b57295ae871b637a6a18ec790af\\\\Car_Findal_Service\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007900000000000000000";}}',
-        'as' => 'generated::Bx3WtM91gh92rQ2B',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000007980000000000000000";}}',
+        'as' => 'generated::rM5AByLFWCfxuPro',
       ),
       'fallback' => false,
       'defaults' => 
