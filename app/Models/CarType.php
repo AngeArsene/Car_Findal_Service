@@ -9,4 +9,6 @@ class CarType extends Model
 {
     /** @use HasFactory<\Database\Factories\CarTypesFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }

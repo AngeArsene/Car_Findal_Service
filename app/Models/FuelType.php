@@ -9,4 +9,6 @@ class FuelType extends Model
 {
     /** @use HasFactory<\Database\Factories\FuelTypesFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }

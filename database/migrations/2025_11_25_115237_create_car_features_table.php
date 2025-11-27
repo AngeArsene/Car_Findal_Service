@@ -25,7 +25,6 @@ return new class extends Migration
             $table->boolean('climate_control')->default(false);
             $table->boolean('rear_parking_sensors')->default(false);
             $table->boolean('leather_seats')->default(false);
-            // $table->timestamps();
         });
     }
 

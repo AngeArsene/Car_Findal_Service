@@ -9,4 +9,6 @@ class Neighborhood extends Model
 {
     /** @use HasFactory<\Database\Factories\NeighborhoodFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }

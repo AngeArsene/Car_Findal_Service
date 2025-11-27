@@ -9,4 +9,6 @@ class State extends Model
 {
     /** @use HasFactory<\Database\Factories\StateFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }

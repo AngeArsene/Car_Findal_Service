@@ -9,4 +9,6 @@ class Maker extends Model
 {
     /** @use HasFactory<\Database\Factories\MakerFactory> */
     use HasFactory;
+
+    public $timestamps = false;
 }
