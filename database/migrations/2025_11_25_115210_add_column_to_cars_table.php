@@ -15,16 +15,16 @@ return new class extends Migration
             $table->after('id', function (Blueprint $table) {
                 $table->integer('year', unsigned: true);
                 $table->integer('price', unsigned: true);
-                $table->foreignId('neighborhood_id')->constrained('neighborhoods');
+                $table->foreignId('neighborhood_id')->constrained()->cascadeOnUpdate();
                 $table->string('vin', 255);
                 $table->integer('mileage', unsigned: true);
                 $table->longText('description')->nullable();
-                $table->foreignId('user_id')->constrained('users');
-                $table->foreignId('maker_id')->constrained('makers');
-                $table->foreignId('model_id')->constrained('models');
-                $table->foreignId('car_type_id')->constrained('car_types');
-                $table->foreignId('fuel_type_id')->constrained('fuel_types');
-                $table->foreignId('city_id')->constrained('cities');
+                $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+                $table->foreignId('maker_id')->constrained()->cascadeOnUpdate();
+                $table->foreignId('model_id')->constrained()->cascadeOnUpdate();
+                $table->foreignId('car_type_id')->constrained()->cascadeOnUpdate();
+                $table->foreignId('fuel_type_id')->constrained()->cascadeOnUpdate();
+                $table->foreignId('city_id')->constrained()->cascadeOnUpdate();
             });
 
             $table->softDeletes();
