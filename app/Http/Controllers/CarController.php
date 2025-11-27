@@ -74,7 +74,14 @@ class CarController extends Controller
      */
     public function show(int $car): View
     {
-        return $this->resolveViewName();
+        $related_cars = collect()->times(5, function (int $id): object {
+            return (object) [
+                'id' => $id,
+                'name' => fake()->word
+            ];
+        });
+
+        return $this->resolveViewName(compact('related_cars'));
     }
 
     /**

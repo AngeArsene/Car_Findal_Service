@@ -1,4 +1,6 @@
-<x-layouts.main :pagination="false">
+@props(['related_cars'])
+
+<x-layouts.main>
     <main>
         <div class="container">
             <h1 class="car-details-page-title">Lexus NX200t - 2016</h1>
@@ -8,17 +10,24 @@
                 <div class="car-images-and-description">
                     <div class="car-images-carousel">
                         <div class="car-image-wrapper">
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" class="car-active-image"
-                                id="activeImage" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt=""
+                                class="car-active-image" id="activeImage" />
                         </div>
                         <div class="car-image-thumbnails">
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
-                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}" alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
+                            <img src="{{ Vite::asset('resources/img/cars/Lexus-RX200t-2016/1.jpeg') }}"
+                                alt="" />
                         </div>
                         <button class="carousel-button prev-button" id="prevButton">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -237,6 +246,9 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Related Cars -->
+            <x-cars-section-wrapper section_title='Most Related Cars' type='normal' :cars="$related_cars" />
         </div>
     </main>
 </x-layouts.main>
